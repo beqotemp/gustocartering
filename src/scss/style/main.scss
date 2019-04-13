@@ -1,0 +1,147 @@
+body {
+	background-image: url(../img/intermediately/bg-page-1.png);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    /* background-position-y: 826px; */
+	
+}
+* {
+	margin:0px;
+	padding: 0px;
+}
+*:focus {
+    outline: none;
+}
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+outline: none;
+}
+button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+
+
+.heading-type-one {
+}
+
+/* Something */
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.Site-content {
+  flex: 1;
+}
+.cole {
+  flex: 1;
+}
+/* elements */
+.white-btn {
+	color: #fff;
+	font-family: $sfcM;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: normal;
+	text-align: center;
+	letter-spacing: 0.24em;
+	text-transform: uppercase;
+	border: 3px solid #FFFFFF;
+	box-sizing: border-box;
+	padding: 12px 17px;
+
+}
+/* End Elements */
+
+/* header */
+.first-view {
+	position: relative;
+	height:100vh;
+	background-image: url(../img/header/bg.png);
+	background-size: cover;
+	&_footer {
+		margin-top: 130px;
+		&__social-media {
+			padding-left: 23px;
+			& i {
+				color: #fff;
+ 				font-size: 28px;
+				&:nth-child(2) {
+					margin-left: 15px;
+				}
+			}
+		}
+		&__contacts {
+			padding-right: 20px;
+			& i {
+				color: #fff;
+ 				font-size: 28px;
+				&:nth-child(2) {
+					margin-left: 15px;
+				}
+			}
+		}
+		&__line hr {
+			border-bottom: 2px solid #fff;
+			width: 333px;
+			border-radius: 1px;
+		}
+		&__arrow svg{
+			height: 40px;
+			margin-top: -4px;
+			color: #fff;
+		}		
+	}
+}
+.main-headind {
+	text-align: center;
+	padding-top: 27.7vh;
+	&_title {
+		color: #fff;
+		font-size: 48px;
+		font-family: $sfcM;
+		font-size: 48px;
+		line-height: normal;
+		letter-spacing: 0.24em;
+		text-transform: uppercase;
+	}
+	&_label {
+
+		color:#fff;
+		font-family: $osR;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: normal;
+		text-align: center;
+		margin-top: 10vh;
+	}
+	&_button {
+		margin-top: 18vh;
+	}
+}
+/* header END */
+/* second view */
+.second-view {
+	position: relative;
+	height: 100vh;
+	& .container{
+		height: 100%;
+		& .row {
+			height: 100%;
+		}
+	}
+}
+.test {
+	position: absolute;
+	height: 100%;
+	top: 0px;
+	background-color: blue;
+}
+/* second view END*/

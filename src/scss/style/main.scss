@@ -91,7 +91,31 @@ button {
     margin: 0 auto;
 }
 /* End Elements */
-
+/* Navigation */
+.nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	/* background-image: url(../img/third-view/bg.png); */
+	background-image: url(../img/intermediately/nav.png);
+	background-size: cover;
+	&_body {
+		text-align: center;
+		&__list {
+			&___item {
+				font-family: $sfcR;
+				font-size: 14px;
+				text-transform: uppercase;
+				color: #fff;
+				line-height: 17px;
+				letter-spacing: 0.24em;
+			}
+		}
+	}
+}
+/* Navigation END*/
 /* header */
 .main-nav {
 	position: fixed;
@@ -254,7 +278,7 @@ button {
 			&___label {
 				margin-top: 5vh;
 				& p {
-					font-family: $osR;
+					font-family: $osL;
 					font-style: normal;
 					font-weight: 300;
 					font-size: 18px;
@@ -285,7 +309,7 @@ button {
 		box-shadow: 0px 2px 10px rgba(48, 56, 79, 0.4);
 		&__body {
 			padding-top: 5px;
-			& .row:not(:first-child) {
+			& .row > .col-6.col-sm-6.col-md-12.col-xl-12:not(:first-child) {
 				margin-top:52px;
 			}
 			&___item {
@@ -303,7 +327,7 @@ button {
 					margin-right: 20px;
 				}
 				&____label {
-					font-family: $osR;
+					font-family: $osB;
 					font-style: normal;
 					font-weight: bold;
 					font-size: 14px;
@@ -319,6 +343,7 @@ button {
 	&_footer {
 		position: absolute;
 		bottom: 0;
+		left:0;
 		width: 100%;
 		padding: 4.4rem 0;
 		background-size: cover;
@@ -429,7 +454,7 @@ button {
 						margin-bottom: 0.4vh;
 					}
 					&_____title {
-						font-family:$sfcR;
+						font-family:$sfcM;
 						font-style: normal;
 						font-weight: 500;
 						font-size: 18px;
@@ -448,7 +473,7 @@ button {
 					&_____label {
 						
 						& p {
-							font-family: $osR;
+							font-family: $osL;
 							font-style: normal;
 							font-weight: 300;
 							font-size: 18px;
@@ -536,7 +561,7 @@ button {
 				&____label {
 					padding-right: 5rem;
 					& p {
-						font-family: $osR;
+						font-family: $osL;
 						font-style: normal;
 						font-weight: 300;
 						font-size: 18px;
@@ -548,7 +573,7 @@ button {
 			}
 			&___price {
 				margin-top: 3vh;
-				font-family: $osR;
+				font-family: $osL;
 				font-style: normal;
 				font-weight: normal;
 				font-size: 13px;
@@ -619,7 +644,7 @@ button {
 				margin-bottom: 6.4vh;
     			margin-top: 3.4vh;
     			& p {
-					font-family: $osR;
+					font-family: $osL;
 					font-style: normal;
 					font-weight: 300;
 					font-size: 18px;
@@ -630,7 +655,7 @@ button {
 			&___price {
 				margin-bottom: 6.4vh;
 				& span {
-					font-family: $osR;
+					font-family: $osL;
 					font-style: normal;
 					font-weight: normal;
 					font-size: 13px;
@@ -985,12 +1010,73 @@ button {
 /* seventh view END*/
 
 /* eight-view */
+
 @media (min-width: 1200px) {
 	.eight-view {
 		&_footer{
 			 .container {
 	    		max-width: 1274px;
 	    	}
+		}
+	}
+}
+.eight-view-mobile {
+	display: none;
+
+	height: 100%;
+	width:100%;
+	background-image: url(../img/eight-view/main-bg.png);
+		/* background-image: url(../img/intermediately/bg-page-9.png); */
+	background-size: cover;
+	&_footer {
+		padding:20px 0px;
+		&__social-media {
+			margin-top:3vh;
+			& i {
+				color: #fff;
+ 				font-size: 28px;
+				&:nth-child(2) {
+					margin-left: 15px;
+				}
+			}
+		}
+		&__contacts {
+			
+			
+			&  span:nth-child(1) {
+				margin-bottom: 0.7vh;
+				font-family: $osR;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 20px;
+				line-height: normal;
+				color: #FFFFFF;
+			}
+			& span:nth-child(2) {
+				margin-bottom: 1vh;
+				font-family: $sfcM;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 20px;
+				line-height: normal;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+
+				color: #FFFFFF;
+			}
+			& span:nth-child(3) {
+				font-family: $sfcM;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 20px;
+				line-height: normal;
+				text-align: right;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+
+				color: #FFFFFF;
+
+			}
 		}
 	}
 }
@@ -1302,25 +1388,76 @@ button {
   }
 } */
 /* mobile */
+
 @media (max-width: 768px) {
+	.second-view_counts__body .row>.col-6.col-sm-6.col-md-12.col-xl-12:not(:first-child) {
+    	margin-top: 0px;
+	}
+	.second-view_counts__body___item____label {
+		height: 70px;
+		font-size: 13px;
+	}
+	.second-view_counts__body___item____number {
+		font-size: 62px;
+	}
+	.fifth-view_wrapper__lunch___label p {
+		font-size: 16px;
+	}
+	.eight-view-mobile {
+		display: block;
+	}
+	.third-view_wrapp__cards___card____body_____label p {
+
+	}
+	.third-view {
+		padding: 5vh 0;
+	}
+	.m-no-padding {
+		padding: 0;
+	}
+	.main-nav {
+	    position: fixed;
+	    width: 62.2px;
+	    height: 88px;
+	    padding: 8px;
+	    top: 0;
+	    left: 12.8%;
+	    transform: translateX(-50%);
+	    z-index: 1;
+	    text-align: center;
+	    background-image: url(../img/header/nav-bg.png);
+	    background-repeat: repeat;
+	    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+	}
+	.main-nav_logo img:nth-child(2) {
+		margin: 0px 7px;
+	}
+	.main-nav_logo img:nth-child(3) {
+    	margin: 4px;
+	}
+	.main-nav_logo img:first-child {
+	    margin-top: 19px;
+	}
 	.fourth-view {
 		background-image: url(../img/intermediately/mobile.png);
 		background-position-x: center;
 	    background-repeat: no-repeat;
 	    background-size: contain;
+	    height: 100vh;
 	}
 	.fourth-view_menu__body___intro____label {
 	   padding-top: 6px;
 	}
 	.fourth-view_menu__body___intro____label p {
 		font-size: 12px;
+		flex-flow: $osL;
 
 	}
 	.fourth-view_menu__body___intro____arrow {
 		display: none;
 	}
 	.fourth-view_menu-picture {
-		height: 334px;
+		height: 50vh;
 	}
 	.eight-view_background {
 		background: #fff;
@@ -1387,7 +1524,7 @@ button {
     	padding: 40px 0px;
 	}
 	.third-view_wrapp__heading {
-    	padding-top: 12vh;
+    	padding-top: 8vh;
 	}
 	.third-view_wrapp__heading___title {
 		font-size: 28px;
@@ -1396,16 +1533,17 @@ button {
     	margin-top: 0vh;
 	}
 	.fourth-view_menu__body {
-    	padding: 30px 15px;
+    	padding: 0;
+		margin-top: -15px;
 	}
 	.fourth-view_menu__body___heading {
 		font-size: 24px;
 	}
 	.fourth-view_menu__body___intro {
-    	margin-top: 4vh;
+    	margin-top: 3.6vh;
 	}
 	.fourth-view_menu__body___button {
-    	margin-top: 4.9vh;
+		margin-top: 4vh;
 	}
 	.fourth-view_menu__body___intro____label {
     	padding-right: 0rem;
@@ -1414,9 +1552,10 @@ button {
     	margin-top: 6vh;
     }
     .fifth-view_wrapper__lunch {
-		padding: 36px 20px;
+		padding: 36px 20px 10px;
     	text-align: center;
-    }
+    	margin: 2vh 0vh;
+}
 
     .fifth-view_wrapper__lunch___button {
     	margin-bottom: 1.5vh;
@@ -1474,7 +1613,7 @@ button {
 		margin-bottom: 5vh;
 	}
 	.seventh-view_reviews {
-		padding-top: 10vh;
+		padding-top: 12vh;
 	}
 	.seventh-view_reviews__item___header____heading {
 		font-size: 26px;
@@ -1493,7 +1632,7 @@ button {
 	}
 	.seventh-view_reviews__around__header {
 	    text-align: center;
-    	margin-top: 5vh;
+    	margin-top: 9vh;
 	}
 	.seventh-view_reviews__around__header___heading {
 		font-size: 28px;
@@ -1503,6 +1642,18 @@ button {
 		display: none;
 	}
 	.slick-next:before {
+		display: none;
+	}
+	.fourth-view_menu {
+	    padding: 6.1vh 7vh;
+	}
+	.fourth-view_menu__body___price {
+	    margin-top: 0.6vh;
+    	font-weight: 400;
+    	font-size: 13px;
+    	letter-spacing: -0.7px;
+	}
+	.fourth-view_menu__body___footer {
 		display: none;
 	}
 }
@@ -1535,7 +1686,7 @@ button {
 		overflow: hidden;
 	}
 }
-@media (min-width: 1400px) {
+@media (min-width: 1400px) { 
 
 	.first-view_footer {
     	margin-top: 20.6vh;
@@ -1544,4 +1695,37 @@ button {
 
 
 
+@media (max-width: 340px) {
+	.fourth-view_menu__body___intro {
+    	margin-top: 1.6vh;
+	}
+	.white-menu-btn {
+		font-size: 17px;
+	}
 
+	.fourth-view_menu__body___intro____label p {
+    	font-size: 11px;
+	}
+	.fourth-view_menu__body___price {
+    	margin-top: -0.7vh;
+	}
+/* 	.main-nav {
+	width: 56.2px;
+	height: 79px;
+}
+.main-nav_logo img:first-child {
+    margin-top: 12px;
+} */
+	.fourth-view_menu {
+    	padding: 7.8vh 4.7vh;
+	}
+	.fourth-view_menu__body___intro {
+    	margin-top: 3vh;
+	}
+
+	.fourth-view_menu__body___intro____label p {
+	    font-size: 12px;
+	    letter-spacing: -.3px;
+	    line-height: 14px;
+	}
+}

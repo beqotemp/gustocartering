@@ -14,6 +14,14 @@
     font-family: 'OpenSans-Regular'; /* Имя шрифта */
     src: url("../fonts/OpenSans-Regular.ttf"); /* Путь к файлу со шрифтом */
    }
+   @font-face {
+    font-family: 'OpenSans-Light'; /* Имя шрифта */
+    src: url("../fonts/OpenSans-Light.woff"); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: 'OpenSans-Bold'; /* Имя шрифта */
+    src: url("../fonts/OpenSans-Bold.woff"); /* Путь к файлу со шрифтом */
+   }
 @font-face {
     font-family: 'Fira Sans Extra Condensed Medium'; /* Имя шрифта */
     src: url("../fonts/FiraSansExtraCondensed-Medium.woff"); /* Путь к файлу со шрифтом */

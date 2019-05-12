@@ -1,6 +1,6 @@
 <%= _.template(require('./../includes/header.html'))() %>
 
-<main class="Site-content">
+<main class="Site-content" id="fullpage">
 
 <!-- Start -->
 <section id="first-view" class="first-view">
@@ -53,7 +53,7 @@
  			<div class="col-12 col-sm-6 col-md-6 col-lg-7 col-xl-7">
  				<div class="second-view_our-team">
  					<div class="second-view_our-team__body">
- 						<span class="second-view_our-team__body___title">
+ 						<span class="second-view_our-team__body___title wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s">
  							Наша команда
  						</span>
  						<hr>
@@ -687,7 +687,7 @@
 	</div>
 </section>
 
-<nav class="nav d-flex justify-content-center align-items-center">
+<!-- <nav class="nav d-flex justify-content-center align-items-center" style="display: none;">
 	<div class="nav_body">
 		<ul class="nav_body__list">
 			<li class="nav_body__list___item">Интро</li>
@@ -702,7 +702,20 @@
 	<div class="nav-footer">
 		
 	</div>
-</nav>
+</nav> -->
 <!-- End -->
 </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>
+	wow = new WOW(
+                      {
+                      boxClass:     'wow',      // default
+                      animateClass: 'animated', // default
+                      offset:       0,          // default
+                      mobile:       true,       // default
+                      live:         true        // default
+                    }
+                    )
+                    wow.init();
+</script>
 <%= _.template(require('./../includes/footer.html'))() %>

@@ -3,7 +3,7 @@
 <main class="Site-content" id="fullpage">
 
 <!-- Start -->
-<section id="first-view" class="first-view">
+<section id="first-view" class="first-view active-section">
 	<div class="container-fluid">
 		<div class="main-headind d-flex flex-column justify-content-center">
 			<span class="main-headind_title">
@@ -47,7 +47,7 @@
 </section>
 <!-- End -->
 <!-- Start -->
-<section id="second-view" class="second-view">
+<section id="second-view" class="second-view prepare-section">
  	<div class="container">
  		<div class="row" style="height: 100%;">
  			<div class="col-12 col-sm-6 col-md-6 col-lg-7 col-xl-7">
@@ -730,17 +730,6 @@
  -->
 <!-- End -->
 </main>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-<script>
-	wow = new WOW(
-                      {
-                      boxClass:     'wow',      // default
-                      animateClass: 'animated', // default
-                      offset:       0,          // default
-                      mobile:       true,       // default
-                      live:         true        // default
-                    }
-                    )
-                    wow.init();
-</script>
+
+
 <%= _.template(require('./../includes/footer.html'))() %>

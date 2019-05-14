@@ -6,7 +6,6 @@
     <link rel="shortcut icon" href="favicon/ico.ico" />
     <link rel="stylesheet" href="css/style.bundle.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="stylesheet" href="libs/fullPage/fullpage.min.css">
     <title>Gusto Cartering</title>
   </head>
   <body class="Site"> 
@@ -75,7 +74,7 @@
  			<div class="col-12 col-sm-6 col-md-6 col-lg-7 col-xl-7">
  				<div class="second-view_our-team">
  					<div class="second-view_our-team__body">
- 						<span class="second-view_our-team__body___title">
+ 						<span class="second-view_our-team__body___title wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s">
  							Наша команда
  						</span>
  						<hr>
@@ -332,45 +331,51 @@
 
 <!-- Start -->
 <section id="fourth-view" class="fourth-view">
+
+	
+
  	<div class="container-fluid" style="height: 100%; padding:0px;">
  		<div class="row no-gutters" style="height: 100%;">
- 			<div class="col-md-6 col-xl-6">
- 				<div class="fourth-view_menu-picture" style="background-image: url(img/fourth-view/first.png);">
- 					
- 				</div>
- 			</div>
- 			<div class="col-md-6 col-xl-6">
- 				<div class="fourth-view_menu d-flex align-items-center">
- 					<div class="fourth-view_menu__body">
- 						<span class="fourth-view_menu__body___heading">
-							Банкетное меню
- 						</span>
- 						<div class="fourth-view_menu__body___intro d-flex flex-row align-items-center">
- 							<div class="fourth-view_menu__body___intro____label">
-	 							<p>Ух, черт! Как же вкусно. Не знаю как вы, а я уже бегу заазывать. Вот только найду свой кошелек. Ты все еще читаешь это? Зачем? Скорее нажимай “Меню” или переходи к оформлению.</p>
- 							</div>
- 							<div class="fourth-view_menu__body___intro____arrow">
- 								<img src="../img/fourth-view/arrow.png" alt="">
- 							</div>
- 						</div>
- 						<div class="fourth-view_menu__body___price">
- 							От 700р. на персону
- 						</div>
- 						<div class="fourth-view_menu__body___button d-flex d-flex justify-content-xs-center justify-content-sm-center">
- 							<a href="#" class="white-menu-btn">Меню</a>
- 						</div>
- 						<div class="fourth-view_menu__body___footer">
-							<div class="fourth-view_menu__body___footer____line"></div>
-							<div class="fourth-view_menu__body___footer____circle">
-								
-							</div>
- 						</div>
- 					</div>
- 				</div>
- 			</div>
+	 			<div class="col-md-6 col-xl-6">
+	 				<div class="fourth-view_menu-picture" style="background-image: url(img/fourth-view/first.png);">
+	 					
+	 				</div>
+	 			</div>
+	 			<div class="col-md-6 col-xl-6">
+	 				<div class="fourth-view_menu d-flex align-items-center">
+	 					<div class="fourth-view_menu__body">
+	 						<span class="fourth-view_menu__body___heading">
+								Банкетное меню
+	 						</span>
+	 						<div class="fourth-view_menu__body___intro d-flex flex-row align-items-center">
+	 							<div class="fourth-view_menu__body___intro____label">
+		 							<p>Ух, черт! Как же вкусно. Не знаю как вы, а я уже бегу заазывать. Вот только найду свой кошелек. Ты все еще читаешь это? Зачем? Скорее нажимай “Меню” или переходи к оформлению.</p>
+	 							</div>
+	 							<div class="fourth-view_menu__body___intro____arrow">
+	 								<img src="../img/fourth-view/arrow.png" alt="">
+	 							</div>
+	 						</div>
+	 						<div class="fourth-view_menu__body___price">
+	 							От 700р. на персону
+	 						</div>
+	 						<div class="fourth-view_menu__body___button d-flex d-flex justify-content-center justify-content-sm-start">
+	 							<a href="#" class="white-menu-btn">Меню</a>
+	 						</div>
+	 						<div class="fourth-view_menu__body___footer">
+								<div class="fourth-view_menu__body___footer____line"></div>
+								<div class="fourth-view_menu__body___footer____circle">
+									
+								</div>
+	 						</div>
+	 					</div>
+	 				</div>
+	 			</div>
+
+	 	
 
  		</div>
  	</div>
+ 	
 </section>
 <!-- End -->
 
@@ -708,41 +713,61 @@
 		 </div>
 	</div>
 </section>
-
-<!-- <nav class="nav d-flex justify-content-center align-items-center" style="display: none;">
+<!-- 
+<nav class="nav d-flex justify-content-center align-items-center" style="display: none;">
 	<div class="nav_body">
 		<ul class="nav_body__list">
-			<li class="nav_body__list___item">Интро</li>
-			<li class="nav_body__list___item">Наша команда</li>
-			<li class="nav_body__list___item">Меню</li>
-			<li class="nav_body__list___item">Как мы работаем</li>
+			<li class="nav_body__list___item"><a href="#">Интро</a></li>
+			<li class="nav_body__list___item"><a href="#">Наша команда</a></li>
+			<li class="nav_body__list___item"><a href="#">Меню</a></li>
+			<li class="nav_body__list___item"><a href="#">Деловые обеды</a></li>
+			<li class="nav_body__list___item"><a href="#">Как мы работаем</a></li>
 		</ul>
 		<div class="nav_body__button">
 			<a href="#" class="white-btn">Оформить заявку</a>
 		</div>
 	</div>
-	<div class="nav-footer">
+	<div class="nav_footer">
+		<div class="container">
+			
+				<div class="d-flex justify-content-between flex-column flex-sm-row">
+					<div class="nav_footer__social-media">
+						<i class="fab fa-instagram"></i>
+						<i class="fab fa-vk"></i>		
+					</div>
+					<div class="nav_footer__number">
+						<span>+7 962 707 82 89</span>		
+					</div>
+			 		<div class="nav_footer__mail">
+			 			<span>spb@cateringgusto.ru</span>
+			 		</div>
+				</div>
+				
+				
 		
+		</div>
 	</div>
-</nav> -->
+</nav>
+ -->
 <!-- End -->
 </main>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>
+	wow = new WOW(
+                      {
+                      boxClass:     'wow',      // default
+                      animateClass: 'animated', // default
+                      offset:       0,          // default
+                      mobile:       true,       // default
+                      live:         true        // default
+                    }
+                    )
+                    wow.init();
+</script>
 	<footer class="footer">
 		
 	</footer>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<script src="js/bundle.js"></script>
 </body>
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/vendors/easings.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/vendors/scrolloverflow.min.js"></script>
-<script>
-	var myFullpage = new fullpage('#fullpage', {
-		scrollingSpeed: 700,
-	});
-</script>
 </html>

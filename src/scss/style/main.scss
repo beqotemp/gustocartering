@@ -26,13 +26,18 @@ button {
 	border: none;
 	cursor: pointer;
 }
+.menu-slider {
+	display: -webkit-box;
 
-
+}
 
 .heading-type-one {
 }
 
 /* Something */
+.no-padding {
+	padding: 0;
+}
 .Site {
   display: flex;
   min-height: 100vh;
@@ -95,32 +100,93 @@ button {
 }
 /* End Elements */
 /* Navigation */
+@media (min-width: 1200px) {
+	.nav {
+		&_footer {
+			& .container {
+				max-width: 953px;
+			}
+		}
+	}
+}
+
 .nav {
 	position: absolute;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
-	/* background-image: url(../img/third-view/bg.png); */
-	background-image: url(../img/intermediately/nav.png);
+	background-image: url(../img/third-view/bg.png);
+	/* background-image: url(../img/intermediately/nav.png); */
 	background-size: cover;
 	&_body {
 		text-align: center;
 		&__list {
+			list-style: none;
+			padding-top: 30px;
 			&___item {
-				font-family: $sfcR;
-				font-size: 14px;
-				text-transform: uppercase;
-				color: #fff;
-				line-height: 17px;
-				letter-spacing: 0.24em;
+				& a {
+					font-family: $sfcM;
+					font-size: 14px;
+					text-transform: uppercase;
+					color: #fff;
+					line-height: 20px;
+					letter-spacing: 0.24em;
+				}
+				&:not(:first-child) {
+					margin-top: 2.4vh;
+				}
 			}
 		}
+		&__button {
+			margin-top:13vh;
+		}
+	}
+	&_footer {
+		position: absolute;
+		bottom: 0;
+	    width: 100%;
+	    padding: 3.9rem 0;
+	    &__social-media {
+
+	    	& i {
+				color: #fff;
+ 				font-size: 28px;
+				&:nth-child(2) {
+					margin-left: 15px;
+				}
+			}
+	    }
+	    &__number {
+	    	& span {
+			    font-family: Fira Sans Condensed Medium,Ubuntu,Arial,sans-serif;
+			    font-style: normal;
+			    font-weight: 500;
+			    line-height: normal;
+			    letter-spacing: .1em;
+			    text-transform: uppercase;
+			    color: #fff;
+			    font-size: 26px;
+	    	}
+	    }
+	    &__mail {
+	    	& span {
+			    font-family: Fira Sans Condensed Medium,Ubuntu,Arial,sans-serif;
+			    font-style: normal;
+			    font-weight: 500;
+			    line-height: normal;
+			    letter-spacing: .1em;
+			    text-transform: uppercase;
+			    color: #fff;
+			    font-size: 26px;
+	    	}
+	    }
 	}
 }
 /* Navigation END*/
 /* header */
 .main-nav {
+	display:none;
 	position: fixed;
 	width: 105.2px;
 	height: 160px;
@@ -152,7 +218,11 @@ button {
 	background-image: url(../img/header/bg.png);
 	background-size: cover;
 	&_footer {
-		margin-top: 13.6vh;
+		position: absolute;
+	    bottom: 0;
+	    width: 100%;
+	    padding: 4.4rem 0;
+			
 		
 		&__social-media {
 			padding-left: 23px;
@@ -469,7 +539,7 @@ button {
 					}
 				}
 				&____body {
-					margin-top: 5vh;
+					margin-top: 3.5vh;
 					&::nth-child(2) {
 						margin-top:4.2vh;
 					}
@@ -981,10 +1051,10 @@ button {
 	background-repeat: no-repeat;
 }
 .slick-next:before {
-	content: url(../img/seventh-view/quote.png);
+    content: url(../img/seventh-view/quote.png);
     position: absolute;
-    right: 0;
-    top: 762%;
+    right: -1rem;
+    top: 13.2rem;
 }
 .slick-prev {
 	background: url(../img/seventh-view/arrow-l.png);
@@ -1007,8 +1077,8 @@ button {
 	content: url(../img/seventh-view/quote.png);
     position: absolute;
     transform: rotate(180deg);
-    left: -35px;
-    top: 300%;
+    left: -1.4vh;
+    top: 4.8rem;
 }
 /* seventh view END*/
 
@@ -1393,6 +1463,22 @@ button {
 /* mobile */
 
 @media (max-width: 768px) {
+	.nav_footer__mail span, .nav_footer__number span {
+		font-size: 18px;
+	}
+	.nav_footer__mail {
+		margin-top: 6px;
+	}
+	.nav_footer__number {
+		margin-top: 10px;
+	}
+	.nav_footer {
+		text-align: center;
+		padding: 2.5rem 0;
+	}
+	.nav_body__list {
+		padding-top: 0;
+	}
 	.second-view_counts__body .row>.col-6.col-sm-6.col-md-12.col-xl-12:not(:first-child) {
     	margin-top: 0px;
 	}
@@ -1693,6 +1779,25 @@ button {
 
 	.first-view_footer {
     	margin-top: 20.6vh;
+	}
+	.main-headind {
+		padding-top: 32.7vh;
+	}
+	.main-headind_label {
+		margin-top: 7vh;
+	}
+	.main-headind_button {
+	    margin-top: 9vh;
+	}
+	.third-view_wrapp__cards {
+	    padding-bottom: 3.4vh;
+	}
+	.slick-prev:after {
+	    content: url(../img/seventh-view/quote.png);
+	    position: absolute;
+	    transform: rotate(180deg);
+	    left: -1.4vh;
+	    top: 4.4rem;
 	}
 }
 

@@ -175,18 +175,34 @@ var fullPage = new FullPage();
                 
             },
             fadeOut(selector) {
-              //$('#first-view').fadeTo('"slow", 0.33');
+              
             }
         },
         '#second-view':{
             fadeIn(selector) {
-              //alert('fadeIN second');
-                // /$('#first-view').css({'z-index':0});
+
             },
             fadeOut(selector) {
-               alert('fadeIN second');
-                //console.log(selector);
+               //alert('fadeIN second');
             }
+        },
+        '#third-view':{
+            fadeIn(selector) {
+              //$('#second-view').addClass('fade-section');
+              //$('#second-view > .container').addClass('fade-section');
+            },
+            fadeOut(selector) {
+               //alert('fadeIN second');
+            }
+        },
+        '#fourth-view':{
+          fadeIn(selector) {
+               //$('#third-view').addClass('no-move');
+            },
+          fadeOut() {
+            // /alert('remove class');
+            //$('#third-view').removeClass('no-move');
+          }
         }
     });
     fullPage.init();

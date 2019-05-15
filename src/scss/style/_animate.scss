@@ -16,7 +16,7 @@
 #first-view.active-section {
   z-index: 1;
   opacity: 1;
-  transition: opacity 1s ease, z-index .1s 1s ;
+  transition: opacity 1s ease, z-index .1s 1s;
   transition-delay: 1s;
 }
 // second view sction animate
@@ -43,7 +43,10 @@
 }
 
 #second-view.active-section {
-  
+
+  transition: z-index .1s 1s;
+  transition-delay:1s;
+
   & .second-view_our-team__body {
     transform: translateX(0px);
     opacity: 1;
@@ -58,6 +61,45 @@
     transition-delay:1s; 
   }
 
+}
+#third-view {
+  background: none;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 1s;
+
+  &.no-move {
+    transform: translateY(0);
+    transition: transform 1s;
+  }
+
+  &.prepare-section {
+
+    & .third-view_wrapp {
+      // transform: translateY(-100%);
+      // transition: .7s;
+    }
+  }
+
+  &.active-section {
+    & .third-view_wrapp {
+      // transform: translateY(0);
+      // transition:.7s;
+    }
+    transform: translateY(0);
+    transition: transform 1s;
+  }
+
+  //z-index: 5;
+ // position: absolute;
+  width: 100%;
+  top: 0;
+}
+.fade-section {
+  opacity: 0;
+  transition: opacity .3s; 
 }
 
 // third view 

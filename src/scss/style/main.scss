@@ -218,7 +218,8 @@ button {
 	background-image: url(../img/header/bg.png);
 	background-size: cover;
 	&_footer {
-		position: absolute;
+		position: fixed;
+		z-index: 11;
 	    bottom: 0;
 	    width: 100%;
 	    padding: 4.4rem 0;
@@ -250,10 +251,11 @@ button {
 				margin-left: 15px;
 			}
 		}
-		&__line hr {
+		&__line {
 			border-bottom: 2px solid #fff;
 			width: 333px;
-			border-radius: 1px;
+			border-bottom: 2px solid white;
+		    height: 19px;
 		}
 		&__arrow svg{
 			height: 40px;
@@ -510,11 +512,8 @@ button {
 			}
 			&___line {
 				margin-top: 1.6vh;
-				& hr {
-					width: 51%;
-					height: 1px;
-					background-color: #fff;
-				}
+				border-bottom: 1px solid white;
+				width: 51%;
 			}
 		}
 		&__cards {
@@ -1775,8 +1774,11 @@ button {
 		overflow: hidden;
 	}
 }
-@media (min-width: 1400px) { 
 
+@media (min-width: 1400px) { 
+	.first-view_footer__line {
+		width: 533px;
+	}
 	.first-view_footer {
     	margin-top: 20.6vh;
 	}
@@ -1835,5 +1837,10 @@ button {
 	    font-size: 12px;
 	    letter-spacing: -.3px;
 	    line-height: 14px;
+	}
+}
+@media (min-width: 1025px) and (max-height: 700px) {
+	.first-view_footer {
+	    padding: 1.4rem 0;
 	}
 }

@@ -76,7 +76,7 @@
  							<div class="col-6 col-sm-6 col-md-12 col-xl-12">
 		 						<div class="row">
 		 							<div class="col-lg-6 col-xl-6 second-view_counts__body___item d-flex align-items-center justify-content-end justify-content-xs-center">
-										<span class="second-view_counts__body___item____number d-flex align-items-center">8</span>
+										<span class="second-view_counts__body___item____number d-flex align-items-center lines-counter" data-count="8">8</span>
 		 						</div>
 		 							<div class="col-lg-6 col-xl-6 second-view_counts__body___item d-flex align-items-center justify-content-xs-center">
 										<span class="second-view_counts__body___item____label">лет на <br> рынке</span>
@@ -86,7 +86,7 @@
  							<div class="col-6 col-sm-6 col-md-12 col-xl-12">
 		 						<div class="row">
 		 							<div class="col-lg-6 col-xl-6 second-view_counts__body___item d-flex align-items-center justify-content-end justify-content-xs-center">
-											<span class="second-view_counts__body___item____number">30</span>
+											<span class="second-view_counts__body___item____number lines-counter">30</span>
 		 							</div>
 		 							<div class="col-lg-6 col-xl-6 second-view_counts__body___item d-flex align-items-center justify-content-xs-center">
 										<span class="second-view_counts__body___item____label">партнеров <br> event <br> агенств</span>
@@ -96,7 +96,7 @@
  							<div class="col-6 col-sm-6 col-md-12 col-xl-12">
 		 						<div class="row">
 		 							<div class="col-lg-6 col-xl-6 second-view_counts__body___item d-flex align-items-center justify-content-end justify-content-xs-center">
-											<span class="second-view_counts__body___item____number">200</span>
+											<span class="second-view_counts__body___item____number lines-counter">200</span>
 		 							</div>
 		 							<div class="col-lg-6 col-xl-6 second-view_counts__body___item d-flex align-items-center justify-content-xs-center">
 										<span class="second-view_counts__body___item____label">и более <br> клиентов <br> за 2018 год</span>
@@ -107,7 +107,7 @@
 	 						<div class="col-6 col-sm-6 col-md-12 col-xl-12">
 		 						<div class="row">
 		 							<div class="col-lg-6 col-xl-6 second-view_counts__body___item d-flex align-items-center justify-content-end justify-content-xs-center">
-											<span class="second-view_counts__body___item____number">300</span>
+											<span class="second-view_counts__body___item____number lines-counter">300</span>
 		 							</div>
 		 							<div class="col-lg-6 col-xl-6 second-view_counts__body___item d-flex align-items-center justify-content-xs-center">
 										<span class="second-view_counts__body___item____label">и более <br> позиций <br> меню</span>
@@ -321,31 +321,58 @@
  	<div class="container-fluid" style="height: 100%; padding:0px;">
  		<div class="row no-gutters" style="height: 100%;">
 	 			<div class="col-md-6 col-xl-6">
-	 				<div class="fourth-view_menu-picture" style="background-image: url(img/fourth-view/first.png);">
-	 					
-	 				</div>
+					 <div id="slider-image-container">
+						<div class="fourth-view_menu-picture" data-slide-img="1" style="background-image: url(img/fourth-view/first.png);">
+
+						</div>
+						<div class="fourth-view_menu-picture" data-slide-img="2" style="background-image: url(img/fourth-view/second.png);">
+	
+						</div>
+					 </div>
+	 				
 	 			</div>
 	 			<div class="col-md-6 col-xl-6">
 	 				<div class="fourth-view_menu d-flex align-items-center">
 	 					<div class="fourth-view_menu__body">
-	 						<span class="fourth-view_menu__body___heading">
-								Банкетное меню
-	 						</span>
-	 						<div class="fourth-view_menu__body___intro d-flex flex-row align-items-center">
-	 							<div class="fourth-view_menu__body___intro____label">
-		 							<p>Ух, черт! Как же вкусно. Не знаю как вы, а я уже бегу заазывать. Вот только найду свой кошелек. Ты все еще читаешь это? Зачем? Скорее нажимай “Меню” или переходи к оформлению.</p>
-	 							</div>
-	 							<div class="fourth-view_menu__body___intro____arrow">
-	 								<img src="../img/fourth-view/arrow.png" alt="">
-	 							</div>
-	 						</div>
-	 						<div class="fourth-view_menu__body___price">
-	 							От 700р. на персону
-	 						</div>
-	 						<div class="fourth-view_menu__body___button d-flex d-flex justify-content-center justify-content-sm-start">
-	 							<a href="#" class="white-menu-btn">Меню</a>
-	 						</div>
+							<div id="site-slider">
+								<div class="fourth-view_menu__body-content" data-slide-id="1">
+									<span class="fourth-view_menu__body___heading">
+										Банкетное меню
+									</span>
+									<div class="fourth-view_menu__body___intro d-flex flex-row align-items-center">
+										<div class="fourth-view_menu__body___intro____label">
+											<p>Ух, черт! Как же вкусно. Не знаю как вы, а я уже бегу заазывать. Вот только найду свой кошелек. Ты все еще читаешь это? Зачем? Скорее нажимай “Меню” или переходи к оформлению.</p>
+										</div>
+									</div>
+									<div class="fourth-view_menu__body___price">
+										От 700р. на персону
+									</div>
+									<div class="fourth-view_menu__body___button d-flex d-flex justify-content-center justify-content-sm-start">
+										<a href="#" class="white-menu-btn">Меню</a>
+									</div>
+								</div>
+								<div class="fourth-view_menu__body-content" data-slide-id="2">
+										<span class="fourth-view_menu__body___heading">
+											Банкетное меню
+										</span>
+										<div class="fourth-view_menu__body___intro d-flex flex-row align-items-center">
+											<div class="fourth-view_menu__body___intro____label">
+												<p>Ух, черт! Как же вкусно. Не знаю как вы, а я уже бегу заазывать. Вот только найду свой кошелек. Ты все еще читаешь это? Зачем? Скорее нажимай “Меню” или переходи к оформлению.</p>
+											</div>
+										</div>
+										<div class="fourth-view_menu__body___price">
+											От 700р. на персону
+										</div>
+										<div class="fourth-view_menu__body___button d-flex d-flex justify-content-center justify-content-sm-start">
+											<a href="#" class="white-menu-btn">Меню</a>
+										</div>
+								</div>
+							</div>
+							<div class="fourth-view_menu__body___intro____arrow" id="site-slider-next">
+								<img src="../img/fourth-view/arrow.png" alt="">
+							</div>		
 	 						<div class="fourth-view_menu__body___footer">
+								
 								<div class="fourth-view_menu__body___footer____line"></div>
 								<div class="fourth-view_menu__body___footer____circle">
 									
@@ -435,7 +462,7 @@
 						<div class="sixth-view_wrapper__body___item d-flex align-items-center">
 							<div class="row no-gutters justify-content-end justify-content-lg-start">
 								<div class="col-lg-7 col-xl-7 order-md-first order-lg-first order-last d-flex align-items-center">
-									<div class="sixth-view_wrapper__body___item____label">
+									<div class="sixth-view_wrapper__body___item____label first-pseudo-text">
 										Оставьте заявку, а мы вышлем Коммерческое Предложение	
 									</div>
 								</div>
@@ -481,7 +508,7 @@
 								</div>
 							</div>
 							<div class="col-lg-3 col-xl-3">
-								<div class="sixth-view_wrapper__body___item____icon">
+								<div class="sixth-view_wrapper__body___item____icon sixth-view-last-icon">
 									<img src="img/sixth-view/hand.png" alt="">
 								</div>
 							</div>

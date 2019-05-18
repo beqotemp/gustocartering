@@ -21,14 +21,14 @@
 }
 // second view sction animate
 
-#second-view,
+#second-view
 {
   position: absolute;
   width: 100%;
   top:0;
   left: 0;
 }
-#second-view.prepare-section {
+#second-view {
 
   & .second-view_our-team__body {
     transform: translateX(-100px);
@@ -82,11 +82,47 @@
       // transition: .7s;
     }
   }
-
+  & .third-view_wrapp__heading___title {
+    transform: translateY(-150%); 
+    transition: transform .5s .5s;  
+  }
+  & .third-view_wrapp__cards___card____heading_____logo {
+    transform: translateY(-100%);
+    transition: transform .5s, opacity .5s;
+    transition-delay: .5s;
+    opacity: 0;
+  }
+  & .third-view_wrapp__cards___card____heading_____title {
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: .3s .8s;
+  }
+  & .third-view_wrapp__cards___card____body {
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: .3s 1s;
+  }
   &.active-section {
-    & .third-view_wrapp {
-      // transform: translateY(0);
-      // transition:.7s;
+   
+    & .third-view_wrapp__heading___title {
+      transform: translateY(0);
+      //transition: transform 1s;
+    }
+    & .third-view_wrapp__heading___lines____line {
+      width: 25.5%;
+      transition: width .5s .5s;
+    }
+    & .third-view_wrapp__cards___card____heading_____logo {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    & .third-view_wrapp__cards___card____heading_____title {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    & .third-view_wrapp__cards___card____body {
+      opacity: 1;
+      transform: translateY(0);
     }
     transform: translateY(0);
     transition: transform 1s;
@@ -102,5 +138,163 @@
   transition: opacity .3s; 
 }
 
+#fourth-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translate(100%);
+  transition: 1s ease;
+  & #slider-image-container {
+    transform: translateX(100%);
+    transition: transform 1s .3s;
+  }
+  & #site-slider {
+    transform: translateX(30%);
+    opacity: 0;
+    transition: transform 1s ease .8s, opacity .8s .8s;
+  }
+  &.active-section {
+    transform: translate(0);
+
+    & #slider-image-container {
+      transform: translateX(0);
+      transition: transform 1s .3s;
+    }
+    & #site-slider {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+#sixth-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(-100%);
+  transition: 1s ease;
+  .sixth-view_wrapper__heading___header {
+    opacity: 0;
+    transform: translateY(-20%);
+    transition: transform .3s .8s, opacity .3s .8s;
+  }
+
+  // icons
+  & .first-pseudo, 
+  & .second-icon,
+  & .third-pseudo,
+  & .sixth-view-last-icon {
+    opacity: 0;
+    & :before {
+      opacity: 0;
+    }
+    //transition: .3s .8s;
+  }
+
+  & .first-pseudo-text {
+    opacity: 0;
+    transform: translateX(-20%);
+    transition: .5s 1s;
+  }
+  & .second-pseudo {
+    opacity: 0;
+    transform: translateX(20%);
+    transition: .5s 1.4s;
+  }
+
+  & .third-label {
+    opacity: 0;
+    transform: translateX(-20%);
+    transition: .5s 1.8s;
+  }
+  & .fourth-label {
+    opacity: 0;
+    transform: translateX(-20%);
+    transition: .5s 2.2s;
+  }
+  & .first-pseudo {
+    transition: .5s .8s;
+    & :before {
+      transition: .5s .8s;
+    }
+  }
+  & .second-icon {
+    transition: .5s 1.2s;
+    & :before {
+      transition: .5s 1.2s;
+    }
+  }
+  & .sixth-view_wrapper__body___item____label.second-pseudo:after {
+    opacity: 0;
+    transition: .5s 1.2s;
+  }
+  & .third-pseudo {
+    transition: .5s 1.6s;
+    & :before {
+      transition: .5s 1.6s;
+    }
+  }
+  & .sixth-view-last-icon {
+    transition: .5s 2s;
+
+    & :before {
+      transition: .5s 2s;
+    }
+  }
+
+
+  &.active-section {
+      // icons
+    & .first-pseudo, 
+    & .second-icon,
+    & .third-pseudo,
+    & .sixth-view-last-icon {
+      opacity: 1;
+      & :before {
+        opacity: 1;
+      }
+      //transition: .3s .8s;
+    }
+    & .first-pseudo-text,
+    & .second-pseudo,
+    & .third-label,
+    & .fourth-label {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    & .sixth-view_wrapper__body___item____label.second-pseudo:after {
+      opacity: 1;
+    }
+
+    transform: translateY(0%);
+    transition: 1s ease;
+
+    & .sixth-view_wrapper__heading___header {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+#eight-view {
+  display: none;
+  position: absolute;
+  top:0;
+  width: 100%;
+  transition: z-index .1s 2s;
+  
+  &.active-section {
+    display: block;
+    z-index: 5;
+  }
+
+}
+.first-view_footer {
+  transition: top 2s ease;
+}
+.top-controller {
+  top:100%;
+}
 // third view 
 

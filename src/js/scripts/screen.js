@@ -1,4 +1,13 @@
 import $ from 'jquery';
+import './spincrement';
+
+function startCounter(selector) {
+  $(selector).spincrement({
+    thousandSeparator: "",
+    duration: 1488,
+  });
+}
+
 class Iterator {
   constructor(array, index, min = 0) {
     this.array = array;
@@ -168,7 +177,7 @@ class FullPage {
 
 var fullPage = new FullPage();
     fullPage.wrapperEl('#fullpage');
-    fullPage.section(['#first-view','#second-view','#third-view','#fourth-view','#fifth-view','#sixth-view','#seventh-view','#eight-view-mobile']);
+    fullPage.section(['#first-view','#second-view','#third-view','#fourth-view','#sixth-view','#eight-view']);
     fullPage.action({
         '#first-view':{
             fadeIn(selector) {
@@ -180,7 +189,9 @@ var fullPage = new FullPage();
         },
         '#second-view':{
             fadeIn(selector) {
-
+              setTimeout(function() {
+                startCounter('.lines-counter');
+              },1000);
             },
             fadeOut(selector) {
                //alert('fadeIN second');
@@ -188,8 +199,7 @@ var fullPage = new FullPage();
         },
         '#third-view':{
             fadeIn(selector) {
-              //$('#second-view').addClass('fade-section');
-              //$('#second-view > .container').addClass('fade-section');
+              //$('#third-view').addClass('no-move');
             },
             fadeOut(selector) {
                //alert('fadeIN second');
@@ -203,6 +213,20 @@ var fullPage = new FullPage();
             // /alert('remove class');
             //$('#third-view').removeClass('no-move');
           }
+        },
+        '#sixth-view': {
+          fadeIn(selector) {
+            $('.first-view_footer').removeClass('top-controller'); 
+            //alert('open');
+           // $('#eight-view').removeClass('active-section');
+           //$('#eight-view').addClass('pre-render');
+          },
+        },
+        '#eight-view': {
+          fadeIn(selector) {
+           $('#sixth-view').css({'z-index':55});
+           $('.first-view_footer').addClass('top-controller'); 
+          }
         }
     });
     fullPage.init();
@@ -211,7 +235,7 @@ var fullPage = new FullPage();
       // prepare-section active-section
       var curent = $(selector);
       //alert(instance.wrapperSelector);
-      console.log($(instance.wrapperSelector).children().removeClass('prepare-section'))
+      console.log($(instance.wrapperSelector).children().removeClass('prepare-section').removeClass('active-section'))
       curent.addClass('active-section').removeClass('prepare-section');
       curent.prev().addClass('prepare-section').removeClass('active-section');
       curent.next().addClass('prepare-section').removeClass('active-section');

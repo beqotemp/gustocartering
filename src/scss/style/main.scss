@@ -133,8 +133,15 @@ button {
 		&__list {
 			list-style: none;
 			padding-top: 30px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 			&___item {
 				transition: 0.3s;
+				position: relative;
+				&:hover {
+					padding: 2.4vh !important;
+				}
 				& a {
 					font-family: $sfcM;
 					font-size: 14px;
@@ -148,7 +155,7 @@ button {
 					}
 				}
 				&:not(:first-child) {
-					margin-top: 2.4vh;
+					padding: 1.2vh 0;
 				}
 
 				&:hover::before {
@@ -156,7 +163,7 @@ button {
 				    position: absolute;
 				    left: 0;
 				    right: 0;
-				    width: 41px;
+				    width: 40%;
 				    border-top: 2px solid #fff;
 				    margin: 0 auto;
 				    margin-top: -10px;
@@ -166,10 +173,10 @@ button {
 				    position: absolute;
 				    left: 0;
 				    right: 0;
-				    width: 41px;
+				    width: 40%;
 				    border-top: 2px solid #fff;
 				    margin: 0 auto;
-				    margin-top: 40px;
+				    margin-top: 35px;
 				}
 				&:before {
 					content: "";

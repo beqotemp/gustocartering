@@ -2,7 +2,17 @@
 #fullpage  {
   position: relative;
 }
-
+#btn-trigger-nav {
+  z-index: 556;
+}
+#main-top-nav {
+  z-index: 555;
+  transform: translateY(-100%);
+  transition: .6s ease;
+}
+#main-top-nav.active-nav {
+  transform: translateY(0);
+}
 // first section
 #first-view {
   
@@ -19,6 +29,7 @@
   transition: opacity 1s ease, z-index .1s 1s;
   transition-delay: 1s;
 }
+
 // second view sction animate
 
 #second-view

@@ -240,5 +240,7 @@ var fullPage = new FullPage();
       curent.prev().addClass('prepare-section').removeClass('active-section');
       curent.next().addClass('prepare-section').removeClass('active-section');
     }
-
+    $('#btn-trigger-nav').click(function() {
+      $('#main-top-nav').toggleClass('active-nav');
+    });
 

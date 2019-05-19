@@ -341,14 +341,18 @@ button {
 		}
 		&__line {
 			border-bottom: 2px solid #fff;
-			width: 333px;
+			width: 75%;
 			border-bottom: 2px solid white;
 		    height: 19px;
 		}
-		&__arrow svg{
-			height: 40px;
-			margin-top: -4px;
-			color: #fff;
+		&__arrow {
+			position: absolute;
+			bottom: 15px;
+			& svg {
+				height: 40px;
+				margin-top: -4px;
+				color: #fff;
+			}
 		}		
 	}
 }
@@ -1911,9 +1915,6 @@ button {
 @media (min-width: 1450px) { 
 	.third-view_wrapp__cards___card____body {
     	margin-top: 2.3vh;
-	}
-	.first-view_footer__line {
-		width: 533px;
 	}
 	.first-view_footer {
     	margin-top: 20.6vh;

@@ -114,12 +114,13 @@ class FullPage {
 
   onWheelTop() {
     var selector = this.sections.prev();
+    
     if (this.defaultFadeOut !== undefined) {
       this.make(this.defaultFadeOut,selector);
     }
     var action = this.actions[selector];
     if (action !== undefined) {
-      this.make(action.fadeOut,selector);
+      this.make(action.fadeIn,selector);
     }
 
     this.make(this.defaultHook,selector);
@@ -128,8 +129,9 @@ class FullPage {
 
   onWheelBottom() {
     var selector = this.sections.next();
+    
     if (this.defaultFadeIn !== undefined) {
-      this.make(this.defaultFadeOut,selector);
+      this.make(this.defaultFadeIn,selector);
     }
 
     var action = this.actions[selector];
@@ -177,8 +179,8 @@ class FullPage {
 
 var fullPage = new FullPage();
     fullPage.wrapperEl('#fullpage');
-    //fullPage.section(['#first-view','#second-view','#third-view','#fourth-view','#fifth-view','#sixth-view','#seventh-view','#eight-view']);
-    fullPage.section(['#first-view','#second-view','#third-view','#fourth-view','#sixth-view','#eight-view']);
+    fullPage.section(['#first-view','#second-view','#third-view','#fourth-view','#fifth-view','#sixth-view','#seventh-view','#eight-view']);
+    //fullPage.section(['#first-view','#second-view','#third-view','#fourth-view','#sixth-view','#eight-view']);
     fullPage.action({
         '#first-view':{
             fadeIn(selector) {
@@ -209,6 +211,8 @@ var fullPage = new FullPage();
         },
         '#fourth-view':{
           fadeIn(selector) {
+           // alert('showed');
+            $('#fourth-view').removeClass('move-top');
                //$('#third-view').addClass('no-move');
             },
           fadeOut() {
@@ -216,18 +220,29 @@ var fullPage = new FullPage();
             //$('#third-view').removeClass('no-move');
           }
         },
+        '#fifth-view': {
+          fadeIn() {
+            $('#fourth-view').addClass('move-top');
+            $('#fifth-view').removeClass('move-hidden'); 
+          }
+        },
         '#sixth-view': {
           fadeIn(selector) {
-            $('.first-view_footer').removeClass('top-controller'); 
+            //$('.first-view_footer').removeClass('top-controller');
+            //$('#fifth-view').addClass('move-hidden'); 
             //alert('open');
            // $('#eight-view').removeClass('active-section');
            //$('#eight-view').addClass('pre-render');
+           $('.first-view_footer').removeClass('top-controller');
           },
         },
         '#eight-view': {
           fadeIn(selector) {
-           $('#sixth-view').css({'z-index':55});
-           $('.first-view_footer').addClass('top-controller'); 
+           //$('#sixth-view').css({'z-index':55});
+           //alert('active last section');
+           $('#seventh-view').addClass('move-top-section');
+           $('.first-view_footer').addClass('top-controller');
+           //$('.first-view_footer').addClass('top-controller'); 
           }
         }
     });

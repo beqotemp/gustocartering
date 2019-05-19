@@ -21,6 +21,9 @@
   z-index: 0;
   opacity: 0;
   transition: opacity 1s ease, z-index .1s 1s;
+  & .first-view_footer__arrow {
+    display: none;
+  }
 }
 
 #first-view.active-section {
@@ -28,6 +31,9 @@
   opacity: 1;
   transition: opacity 1s ease, z-index .1s 1s;
   transition-delay: 1s;
+  & .first-view_footer {
+    display: block;
+  }
 }
 
 // second view sction animate
@@ -306,6 +312,17 @@
 }
 .top-controller {
   top:100%;
+}
+.first-view_footer__arrow {
+  animation: moveArrow 2s infinite linear;
+}
+@keyframes moveArrow {
+  40% {
+    transform: translateY(7px);
+  }
+  80% {
+    transform: translateY(-7px);
+  }
 }
 // third view 
 

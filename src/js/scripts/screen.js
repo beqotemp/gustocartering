@@ -177,11 +177,12 @@ class FullPage {
 
 var fullPage = new FullPage();
     fullPage.wrapperEl('#fullpage');
+    //fullPage.section(['#first-view','#second-view','#third-view','#fourth-view','#fifth-view','#sixth-view','#seventh-view','#eight-view']);
     fullPage.section(['#first-view','#second-view','#third-view','#fourth-view','#sixth-view','#eight-view']);
     fullPage.action({
         '#first-view':{
             fadeIn(selector) {
-                
+              $('.first-view_footer__arrow').fadeIn();
             },
             fadeOut(selector) {
               
@@ -189,6 +190,7 @@ var fullPage = new FullPage();
         },
         '#second-view':{
             fadeIn(selector) {
+              $('.first-view_footer__arrow').fadeOut();
               setTimeout(function() {
                 startCounter('.lines-counter');
               },1000);

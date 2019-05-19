@@ -339,11 +339,14 @@ button {
 				margin-left: 15px;
 			}
 		}
-		&__line {
-			border-bottom: 2px solid #fff;
-			width: 75%;
-			border-bottom: 2px solid white;
-		    height: 19px;
+		&__lines{
+			width: 80%;
+			&___line {
+				border-bottom: 2px solid #fff;
+				width: 50%;
+				border-bottom: 2px solid white;
+			    height: 19px;
+			}
 		}
 		&__arrow {
 			position: absolute;
@@ -1410,10 +1413,19 @@ button {
 	position: relative;
 	height: 100%;
 }
+#site-slider-prev {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    z-index: 90;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
 #site-slider-next {
 	position: absolute;
 	top: 50%;
 	right: 20px;
+	cursor: pointer;
 }
 .fourth-view_menu__body {
 	height: 100%;

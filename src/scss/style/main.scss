@@ -29,6 +29,11 @@ button {
 	border: none;
 	cursor: pointer;
 }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  
+}
 .menu-slider {
 	display: -webkit-box;
 
@@ -88,6 +93,12 @@ button {
 	border: 3px solid #FFFFFF;
 	box-sizing: border-box;
 	padding: 12px 33px;
+	transition: 0.4s;
+}
+.white-menu-btn:hover {
+	background: #fff;
+	color: rgb(40, 50, 74);
+	text-decoration: none;
 }
 .submit-btn {
 	display: inline-block;
@@ -105,6 +116,12 @@ button {
 	border-radius: 1px;
 	padding: 11px 42px;
     margin: 0 auto;
+    transition: 0.4s;
+}
+.submit-btn:hover {
+	background: #FF9D6E;
+	color: #fff;
+	text-decoration: none;
 }
 /* End Elements */
 /* Navigation */
@@ -349,6 +366,7 @@ button {
 			}
 		}
 		&__arrow {
+			display: none;
 			position: absolute;
 			bottom: 15px;
 			& svg {

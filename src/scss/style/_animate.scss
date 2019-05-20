@@ -1,4 +1,4 @@
-
+@media (min-width:1100px) {
 #fullpage  {
   position: relative;
 }
@@ -173,7 +173,7 @@
   }
   &.active-section {
     transform: translate(0);
-
+    z-index: 55;
     & #slider-image-container {
       transform: translateX(0);
       transition: transform 1s .3s;
@@ -391,6 +391,7 @@
 }
 // third view 
 #seventh-view {
+  
   .reviews-slider {
     opacity: 0;
     transition: opacity 1s .4s, transform .8s .4s;
@@ -408,6 +409,10 @@
     z-index: 20;
     width: 100%;
     background: #fff;
+    // transition: transform 1s;
+    // transform:  translateY(0);
+    // transform: translateY(0);
+    // transition: transform 1s ease;
 
     & .reviews-slider,
     & .seventh-view_reviews__around {
@@ -427,4 +432,72 @@
 .first-view_footer {
   z-index: 554 !important;
 }
-
+.no-hidden-section {
+  top: 0;
+  position: absolute !important;
+  width: 100%;
+}
+// .move-bottom-section {
+//   transform: translateY(0);
+//   transition: 1s ease;
+//   z-index: 550;
+//   position: absolute!important;
+//   top: 0;
+//   width: 100%;
+// }
+.active-last-section {
+  position: absolute !important;
+  top: 0;
+  width: 100%;
+  transition: z-index .1s 2s;
+  z-index: 2;
+}
+.seventh-view-no-move {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  background: #fff;
+  transition: .8s;
+}
+.line-animate-1 {
+  width: 2% !important;
+  transition: .5s 1s ease;
+}
+.line-animate-1-1 {
+  width: 48% !important;
+  transition: .5s .8s ease;
+}
+.line-pos-end {
+  justify-content: flex-end;
+}
+.line-animate-2-1 {
+  width: 0% !important;
+  transition: .5s .8s ease;
+}
+.line-animate-2 {
+  width: calc(45%) !important;
+  transform: translateX(15%);
+  transition: width .5s 1.1s ease, transform .3s 1.7s ease;
+}
+.fade-contact a{
+  opacity: 0;
+  transition: .3s 1.8s ease;
+}
+.first-view_footer__contacts > div {
+  opacity: 0;
+  display: none;
+  transition: opacity .5s 1.6s;
+}
+.fade-contact > div {
+  opacity: 1;
+  display: block;
+  margin-left: 0;
+}
+.fade-contact {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+}

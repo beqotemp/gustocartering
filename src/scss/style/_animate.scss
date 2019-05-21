@@ -393,6 +393,8 @@
 // third view 
 #seventh-view {
   
+  transition: top .8s, z-index .8s, transform .8s;
+
   .reviews-slider {
     opacity: 0;
     transition: opacity 1s .4s, transform .8s .4s;
@@ -460,7 +462,7 @@
   z-index: 20;
   width: 100%;
   background: #fff;
-  transition: .8s;
+  transition: translate .8s, top .8s;
 }
 .line-animate-1 {
   width: 2% !important;

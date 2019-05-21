@@ -1211,7 +1211,7 @@ input[type=number]::-webkit-outer-spin-button {
 .eight-view-mobile {
 	display: none;
 
-	height: 100%;
+	
 	width:100%;
 	background-image: url(../img/eight-view/main-bg.png);
 		/* background-image: url(../img/intermediately/bg-page-9.png); */
@@ -1694,7 +1694,7 @@ input[type=number]::-webkit-outer-spin-button {
 	    margin-top: 19px;
 	}
 	.fourth-view {
-		background-image: url(../img/intermediately/mobile.png);
+		/* background-image: url(../img/intermediately/mobile.png); */
 		background-position-x: center;
 	    background-repeat: no-repeat;
 	    background-size: contain;
@@ -1749,7 +1749,10 @@ input[type=number]::-webkit-outer-spin-button {
 		padding-bottom:3vh;
 	}
 	.white-btn {
-		font-size: 18px;
+		font-size: 17px;
+	}
+	.white-btn {
+		padding: 9px 11px;
 	}
 	.second-view_our-team__body___title {
 		font-size: 46px;

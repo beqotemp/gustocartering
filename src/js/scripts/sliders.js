@@ -40,9 +40,10 @@ $(document).ready(function(){
         .removeClass('active-slide')
         .prev()
         .addClass('active-slide')
+        console.log(activeSlide.next());
         if (activeSlide.length ===  0) {
           slides.parent().children().removeClass('active-slide');
-          slides.last().addClass('active-slide')
+          activeSlide = slides.last().addClass('active-slide')
           slideImg();
           //initSlider();
         }

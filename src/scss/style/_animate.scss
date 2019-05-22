@@ -524,8 +524,22 @@
   justify-content: center;
   & > div {
     width: 23.5%;
-    transition: width .8s 1s ease;
+    //animation: animfifthview  .8s ease forwards;
+    // /transition: width .8s 1s ease;
   }
 }
-
+@keyframes animfifthview {
+  from {width: 50%;}
+  
+  to {width: 23.5%;}
+  }
+}
+.first-view_footer__lines___line {
+  transition: all 1s ease .5s;
+}
+.center-controll-line {
+  justify-content: center;
+}
+.first-view_footer__arrow {
+  display: none;
 }

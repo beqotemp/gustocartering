@@ -5,6 +5,7 @@ import bootstrap from "bootstrap";
 import "./scripts/sliders.js";
 import "./scripts/second-slider.js";
 import "./scripts/screen.js";
+import "./scripts/popover.js";
 
 
 

@@ -72,6 +72,7 @@ class FullPage {
     this.actions = null;
     this.wrapper = null;
     this.wrapperSelector = null;
+    this.scrollable = true;
   }
 
   wrapperEl(wrapper) {
@@ -119,7 +120,6 @@ class FullPage {
       });
     }
   }
-
   onWheelTop() {
     var selector = this.sections.prev();
     
@@ -178,6 +178,15 @@ class FullPage {
 
   onWheel(e,ctx) {
     e = e || window.event;
+
+    if (!ctx.scrollable) {
+      return false;
+    }
+    ctx.scrollable = false;
+
+    setTimeout(() => {
+      ctx.scrollable = true;
+    }, 2000);
   
     // wheelDelta не дает возможность узнать количество пикселей
     var curentDelta = 0;

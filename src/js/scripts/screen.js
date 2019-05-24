@@ -349,7 +349,15 @@ var fullPage = new FullPage();
 
     $('.nav-link-anchor').click(function(e) {
       e.preventDefault();
-      fullPage.preventApply($(this).attr('href'));
+      if ($(window).width() < 850) {
+        var id = $(this).attr('href')
+        var top = $(id).offset().top;
+        alert(top);
+        $('body').animate({scrollTop: top}, 1500);
+      } else {
+        fullPage.preventApply($(this).attr('href'));
+      }
+      
       $('#main-top-nav').removeClass('active-nav');
     });
 

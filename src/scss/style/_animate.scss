@@ -1,6 +1,7 @@
 #main-top-nav {
   z-index: 555;
-  transform: translateY(-100%);
+  position: fixed;
+  top:-100%;
   transition: .6s ease;
 }
 #fullpage  {
@@ -11,7 +12,7 @@
 }
 
 #main-top-nav.active-nav {
-  transform: translateY(0);
+  top:0;
 }
 @media (min-width:1100px) {
 
@@ -525,25 +526,50 @@
   transition: opacity 1s 1.2s ease;
 }
 .animation-line-fifth-view {
-  justify-content: center;
+  justify-content: flex-end;
   & > div {
-    width: 23.5%;
-    //animation: animfifthview  .8s ease forwards;
-    // /transition: width .8s 1s ease;
+    //width: 23.5%;
+    //animation: animfifthview  1s ease forwards;
+    transition: width .8s 1s ease;
+  }
+  & .first-line {
+    width: 0;
+  }
+  & .second-line {
+    transform: translateX(-24rem);
+    transition: .8s ease .4s;
+  }
+}
+.controll-board-end {
+  animation: animLineFifthView  1s 2s ease forwards;
+  //justify-content: flex-end;
+}
+@keyframes animLineFifthView {
+  from {
+    justify-content: flex-start;
+  }
+  to {
+    justify-content: flex-end;
   }
 }
 @keyframes animfifthview {
-  from {width: 50%;}
-  
-  to {width: 23.5%;}
+  from {
+    width: 50%;
+  }
+  to {
+   width: 50%;
   }
 }
-.first-view_footer__lines___line {
-  transition: all 1s ease .5s;
-}
-.center-controll-line {
-  justify-content: center;
-}
-.first-view_footer__arrow {
-  display: none;
+// @keyframes identifier {
+  
+// }
+  .first-view_footer__lines___line {
+    transition: all 1s ease .5s;
+  }
+  .center-controll-line {
+    justify-content: center;
+  }
+  .first-view_footer__arrow {
+    display: none;
+  }
 }

@@ -247,7 +247,7 @@ var fullPage = new FullPage();
               },1000);
               $('.second-line').addClass('line-animate-1');
               $('.first-line').addClass('line-animate-1-1');
-              $('.first-view_footer__lines').removeClass('center-controll-line');
+              $('.first-view_footer__lines').removeClass('controll-board-end');
             },
             fadeOut(selector) {
                //alert('fadeIN second');
@@ -261,7 +261,7 @@ var fullPage = new FullPage();
               $('.first-line').removeClass('line-animate-1-1');
               $('.first-view_footer__lines').removeClass('animation-line-fourth-view');
               $('.first-view_footer__social-media').removeClass('hiden-left-contact');
-              //$('.first-view_footer__lines').addClass('center-controll-line');
+              $('.first-view_footer__lines').addClass('controll-board-end');
               hideTwoAnim();
               //$('#third-view').addClass('no-move');
             },
@@ -295,7 +295,7 @@ var fullPage = new FullPage();
             $('#seventh-view').removeClass('seventh-view-no-move');
             $('#fifth-view').addClass('no-hidden-section');
             $('.first-view_footer__lines').removeClass('animation-line-fourth-view');
-            $('.first-view_footer__lines').addClass('center-controll-line');
+            //$('.first-view_footer__lines').addClass('center-controll-line');
             hideTwoAnim(); 
           }
         },
@@ -349,13 +349,13 @@ var fullPage = new FullPage();
 
     $('.nav-link-anchor').click(function(e) {
       e.preventDefault();
+      var element = $(this).attr('href');
       if ($(window).width() < 850) {
-        var id = $(this).attr('href')
-        var top = $(id).offset().top;
-        alert(top);
-        $('body').animate({scrollTop: top}, 1500);
+        var top = $(element).offset().top;
+        $('html,body').animate({scrollTop: top + 20}, 1500);
+
       } else {
-        fullPage.preventApply($(this).attr('href'));
+        fullPage.preventApply(element);
       }
       
       $('#main-top-nav').removeClass('active-nav');

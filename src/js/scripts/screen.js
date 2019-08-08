@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import './spincrement';
+import './spincrement'; 
 
 function startCounter(selector) {
   $(selector).spincrement({
@@ -226,7 +226,7 @@ function hideTwoAnim() {
 
 var fullPage = new FullPage();
     fullPage.wrapperEl('#fullpage');
-    fullPage.section(['#first-view','#second-view','#third-view','#fourth-view','#fifth-view','#sixth-view','#seventh-view','#eight-view']);
+    fullPage.section(['#first-view','#second-view','#third-view','#fp-m','#s-m','#t-m','#fourth-view','#fifth-view','#sixth-view','#seventh-view','#eight-view']);
     //fullPage.section(['#first-view','#second-view','#third-view','#fourth-view','#sixth-view','#eight-view']);
     fullPage.action({
         '#first-view':{
@@ -261,7 +261,9 @@ var fullPage = new FullPage();
               $('.first-line').removeClass('line-animate-1-1');
               $('.first-view_footer__lines').removeClass('animation-line-fourth-view');
               $('.first-view_footer__social-media').removeClass('hiden-left-contact');
-              $('.first-view_footer__lines').addClass('controll-board-end');
+              $('.first-view_footer__lines').removeClass('centner-lines')
+              $('.first-view_footer__lines___line').removeClass('slide-fade-collapse');
+              
               hideTwoAnim();
               //$('#third-view').addClass('no-move');
             },
@@ -269,6 +271,35 @@ var fullPage = new FullPage();
                //alert('fadeIN second');
             }
         },
+        '#fp-m': {
+          fadeIn(selector) {
+              $('.first-view_footer__lines').addClass('centner-lines')
+              $('.first-view_footer__lines___line').addClass('slide-fade-collapse');
+              
+          },
+          fadeOut(selector) {
+               //alert('fadeIN second');
+            }
+        },
+        '#s-m': {
+          fadeIn(selector) {
+
+            
+          },
+          fadeOut(selector) {
+               //alert('fadeIN second');
+            }
+        },
+        '#t-m': {
+          fadeIn(selector) {
+
+            $('.first-view_footer__lines').addClass('controll-board-end');
+          },
+          fadeOut(selector) {
+               //alert('fadeIN second');
+            } 
+        },
+
         '#fourth-view':{
           fadeIn(selector) {
            // alert('showed');
